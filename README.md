@@ -1,39 +1,59 @@
 # Mutual Fund Analytics
 
-## Project Status
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
+![Status](https://img.shields.io/badge/Status-Day%202%20Completed-success?style=for-the-badge)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
+
+---
+
+## 📌 Project Status
 
 🚧 **In Progress (Day 2 Completed)**
 
-This repository contains my Capstone Project developed during the Bluestock Fintech Data Analytics Internship.
+This repository contains my **Capstone Project** developed during the **Bluestock Fintech Data Analytics Internship**.
 
 ---
 
-# Project Objective
+# 📖 Project Objective
 
-The objective of this project is to analyze Mutual Fund datasets using Python and SQL, perform ETL operations, clean and validate data, fetch live Mutual Fund NAV data using APIs, build a SQLite database, generate business insights, and create interactive dashboards.
-
----
-
-# Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- Requests
-- SQLAlchemy
-- SQLite
-- Jupyter Notebook
-- Git
-- GitHub
+The objective of this project is to analyze Mutual Fund datasets using Python and SQL, perform ETL operations, clean and validate financial data, fetch live Mutual Fund NAV data using APIs, build a SQLite database, generate business insights, and create interactive dashboards for decision-making.
 
 ---
 
-# Project Structure
+# 🚀 Features
 
-```
+- ETL Pipeline using Python
+- Mutual Fund Data Cleaning
+- Live NAV Data Fetching using MF API
+- Data Quality Validation
+- SQLite Database Design
+- SQL Analytical Queries
+- Data Dictionary Documentation
+- Business Insights Generation
+- Interactive Dashboard (Upcoming)
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Programming Language | Python |
+| Data Analysis | Pandas, NumPy |
+| Data Visualization | Matplotlib, Seaborn, Plotly |
+| Database | SQLite |
+| ORM | SQLAlchemy |
+| API | Requests |
+| Notebook | Jupyter Notebook |
+| Version Control | Git |
+| Repository | GitHub |
+
+---
+
+# 📂 Project Structure
+
+```text
 Mutual-Fund-Analytics
 │
 ├── data
@@ -62,7 +82,7 @@ Mutual-Fund-Analytics
 
 ---
 
-# Day 1 – Project Setup & Data Ingestion
+# ✅ Day 1 – Project Setup & Data Ingestion
 
 ### Completed Tasks
 
@@ -72,58 +92,62 @@ Mutual-Fund-Analytics
 - Installed all required Python libraries.
 - Generated `requirements.txt`.
 - Loaded all 10 CSV datasets using Pandas.
-- Displayed dataset shape, columns, and data types.
+- Displayed dataset shape, columns, data types, and sample records.
 - Performed missing value and duplicate checks.
-- Explored Fund Master dataset.
-- Validated AMFI scheme codes.
-- Retrieved live NAV data using the MF API.
-- Saved fetched NAV data into CSV files.
-- Created a data quality summary.
-- Committed and pushed Day 1 work to GitHub.
+- Explored the Fund Master dataset.
+- Validated AMFI Scheme Codes.
+- Retrieved Live NAV data using the MF API.
+- Saved API responses into CSV files.
+- Generated a Data Quality Summary.
+- Committed and pushed Day 1 deliverables.
 
 ---
 
-# Day 2 – Data Cleaning & SQLite Database Design
+# ✅ Day 2 – Data Cleaning & SQLite Database Design
 
 ### Completed Tasks
 
-- Cleaned `nav_history.csv`.
+### Data Cleaning
+
+- Cleaned `nav_history.csv`
 - Parsed date columns into datetime format.
+- Sorted records by AMFI Code and Date.
 - Removed duplicate records.
 - Forward-filled missing NAV values.
-- Validated NAV values.
+- Validated NAV values greater than zero.
 
-- Cleaned `investor_transactions.csv`.
-- Standardized transaction types.
-- Standardized KYC status values.
+### Investor Transactions
+
+- Standardized Transaction Types.
+- Standardized KYC Status values.
 - Validated transaction amounts.
+- Fixed date formats.
 - Removed duplicate records.
 
-- Cleaned `scheme_performance.csv`.
+### Scheme Performance
+
 - Validated return columns.
-- Checked expense ratio values.
+- Checked numeric values.
+- Verified Expense Ratio range.
 - Removed duplicate records.
+
+### Database Design
 
 - Generated cleaned datasets in `data/processed`.
-
 - Designed SQLite database schema.
-
 - Loaded cleaned datasets into SQLite using SQLAlchemy.
-
+- Verified database row counts.
 - Created:
   - `schema.sql`
   - `queries.sql`
   - `data_dictionary.md`
-
-- Verified database row counts.
-
-- Committed and pushed Day 2 work to GitHub.
+- Committed and pushed Day 2 deliverables.
 
 ---
 
-# Dataset
+# 📊 Dataset
 
-The project uses Mutual Fund datasets including:
+This project uses 10 Mutual Fund datasets.
 
 - Fund Master
 - NAV History
@@ -138,27 +162,44 @@ The project uses Mutual Fund datasets including:
 
 ---
 
-# Current Progress
+# 📈 Current Progress
 
 | Milestone | Status |
-|-----------|--------|
+|------------|--------|
 | ✅ Day 1 – Project Setup & Data Ingestion | Completed |
 | ✅ Day 2 – Data Cleaning & SQLite Database Design | Completed |
 | ⏳ Day 3 – Exploratory Data Analysis (EDA) | Pending |
 | ⏳ Day 4 – Dashboard Development | Pending |
-| ⏳ Day 5 – Advanced Analytics | Pending |
-| ⏳ Day 6 – Final Report & Documentation | Pending |
+| ⏳ Day 5 – Advanced Analytics & Business Insights | Pending |
+| ⏳ Day 6 – Final Report & Project Documentation | Pending |
 
 ---
 
-# GitHub Repository
+# 🎯 Future Improvements
 
+- Power BI Dashboard
+- Advanced SQL Analysis
+- KPI Dashboard
+- Business Reports
+- Predictive Analytics
+- Interactive Visualizations
+- Final Project Presentation
+
+---
+
+# 🔗 GitHub Repository
+
+**Repository:**  
 https://github.com/SPYDER-GIT/mutual-fund-analytics
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 **Suraj Singh**
 
-Bluestock Fintech – Data Analytics Internship
+**Bluestock Fintech – Data Analytics Internship**
+
+---
+
+⭐ If you found this project helpful, feel free to star the repository.
