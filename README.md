@@ -2,7 +2,7 @@
 
 ## Project Status
 
-🚧 **In Progress (Day 1 Completed)**
+🚧 **In Progress (Day 2 Completed)**
 
 This repository contains my Capstone Project developed during the Bluestock Fintech Data Analytics Internship.
 
@@ -10,7 +10,7 @@ This repository contains my Capstone Project developed during the Bluestock Fint
 
 # Project Objective
 
-The objective of this project is to analyze Mutual Fund datasets using Python and SQL, perform data quality checks, fetch live Mutual Fund NAV data through APIs, generate business insights, and build interactive dashboards.
+The objective of this project is to analyze Mutual Fund datasets using Python and SQL, perform ETL operations, clean and validate data, fetch live Mutual Fund NAV data using APIs, build a SQLite database, generate business insights, and create interactive dashboards.
 
 ---
 
@@ -24,6 +24,7 @@ The objective of this project is to analyze Mutual Fund datasets using Python an
 - Plotly
 - Requests
 - SQLAlchemy
+- SQLite
 - Jupyter Notebook
 - Git
 - GitHub
@@ -41,27 +42,35 @@ Mutual-Fund-Analytics
 │
 ├── notebooks
 ├── sql
+│   ├── schema.sql
+│   └── queries.sql
+│
 ├── dashboard
 ├── reports
 │
 ├── data_ingestion.py
 ├── live_nav_fetch.py
 ├── data_quality.py
+├── data_cleaning.py
+├── database_loader.py
+│
+├── bluestock_mf.db
+├── data_dictionary.md
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-# Day 1 Deliverables
+# Day 1 – Project Setup & Data Ingestion
 
-Completed the following tasks:
+### Completed Tasks
 
 - Created the project folder structure.
 - Initialized the Git repository.
 - Connected the project to GitHub.
 - Installed all required Python libraries.
-- Generated requirements.txt.
+- Generated `requirements.txt`.
 - Loaded all 10 CSV datasets using Pandas.
 - Displayed dataset shape, columns, and data types.
 - Performed missing value and duplicate checks.
@@ -69,8 +78,46 @@ Completed the following tasks:
 - Validated AMFI scheme codes.
 - Retrieved live NAV data using the MF API.
 - Saved fetched NAV data into CSV files.
-- Created a basic data quality summary.
+- Created a data quality summary.
 - Committed and pushed Day 1 work to GitHub.
+
+---
+
+# Day 2 – Data Cleaning & SQLite Database Design
+
+### Completed Tasks
+
+- Cleaned `nav_history.csv`.
+- Parsed date columns into datetime format.
+- Removed duplicate records.
+- Forward-filled missing NAV values.
+- Validated NAV values.
+
+- Cleaned `investor_transactions.csv`.
+- Standardized transaction types.
+- Standardized KYC status values.
+- Validated transaction amounts.
+- Removed duplicate records.
+
+- Cleaned `scheme_performance.csv`.
+- Validated return columns.
+- Checked expense ratio values.
+- Removed duplicate records.
+
+- Generated cleaned datasets in `data/processed`.
+
+- Designed SQLite database schema.
+
+- Loaded cleaned datasets into SQLite using SQLAlchemy.
+
+- Created:
+  - `schema.sql`
+  - `queries.sql`
+  - `data_dictionary.md`
+
+- Verified database row counts.
+
+- Committed and pushed Day 2 work to GitHub.
 
 ---
 
@@ -95,12 +142,12 @@ The project uses Mutual Fund datasets including:
 
 | Milestone | Status |
 |-----------|--------|
-| Day 1 - Project Setup & Data Ingestion | ✅ Completed |
-| Day 2 - Exploratory Data Analysis | ⏳ Pending |
-| Day 3 - Data Cleaning & Feature Engineering | ⏳ Pending |
-| Day 4 - SQL Analysis | ⏳ Pending |
-| Day 5 - Dashboard Development | ⏳ Pending |
-| Day 6 - Final Report & Documentation | ⏳ Pending |
+| ✅ Day 1 – Project Setup & Data Ingestion | Completed |
+| ✅ Day 2 – Data Cleaning & SQLite Database Design | Completed |
+| ⏳ Day 3 – Exploratory Data Analysis (EDA) | Pending |
+| ⏳ Day 4 – Dashboard Development | Pending |
+| ⏳ Day 5 – Advanced Analytics | Pending |
+| ⏳ Day 6 – Final Report & Documentation | Pending |
 
 ---
 
@@ -114,4 +161,4 @@ https://github.com/SPYDER-GIT/mutual-fund-analytics
 
 **Suraj Singh**
 
-Bluestock Fintech Data Analytics Internship
+Bluestock Fintech – Data Analytics Internship
