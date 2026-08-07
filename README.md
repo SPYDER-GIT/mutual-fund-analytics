@@ -91,6 +91,7 @@ Mutual-Fund-Analytics
 │
 ├── notebooks
 │   └── EDA_Analysis.ipynb
+│   └── Performance_Analytics.ipynb
 │
 ├── reports
 │   ├── nav_trend_2022_2026.png
@@ -105,6 +106,17 @@ Mutual-Fund-Analytics
 │   ├── folio_count_growth.png
 │   ├── nav_return_correlation.png
 │   └── sector_allocation_donut.png
+│   └── daily_return_distribution.png
+│   └── cagr_3year_comparison.png
+│   └── sharpe_ratio_top10.png
+│   └── sortino_ratio_top10.png
+│   └── alpha_top10.png
+│   └── max_drawdown_chart.png
+│   └── benchmark_comparison.png
+│   └── fund_scorecard.png
+│   └── fund_scorecard.csv
+│   └── max_drawdown.csv
+│   └── tracking_error.csv
 │
 ├── sql
 │   ├── schema.sql
