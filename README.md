@@ -2,14 +2,14 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
-![Status](https://img.shields.io/badge/Status-Day%203%20Completed-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Day%204%20Completed-success?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
 
 ---
 
 ## 📌 Project Status
 
-🚧 **In Progress (Day 3 Completed)**
+🚧 **In Progress (Day 4 Completed)**
 
 This repository contains my **Capstone Project** developed during the **Bluestock Fintech Data Analytics Internship**.
 
@@ -249,6 +249,27 @@ The notebook includes:
 - Committed and pushed Day 3 work to GitHub.
 
 ---
+
+# ✅ Day 4 – Fund Performance Analytics
+
+### Completed Tasks
+
+- Computed daily NAV returns for all mutual fund schemes.
+- Validated the daily return distribution using visualization.
+- Calculated 1-year, 3-year, and 5-year CAGR values.
+- Ranked funds based on Sharpe Ratio.
+- Calculated Sortino Ratio using downside deviation.
+- Computed Alpha and Beta using benchmark regression.
+- Calculated Maximum Drawdown for each fund.
+- Identified worst drawdown dates.
+- Built a Fund Scorecard (0–100) using weighted ranking.
+- Compared top-performing funds with NIFTY 50 and NIFTY 100.
+- Calculated Tracking Error against benchmark indices.
+- Generated CSV reports and visualization charts.
+- Completed `Performance_Analytics.ipynb`.
+- Committed and pushed Day 4 deliverables to GitHub.
+
+---
 # 📈 Current Progress
 
 | Milestone | Status |
@@ -256,7 +277,7 @@ The notebook includes:
 | ✅ Day 1 – Project Setup & Data Ingestion | Completed |
 | ✅ Day 2 – Data Cleaning & SQLite Database Design | Completed |
 | ✅ Day 3 – Exploratory Data Analysis (EDA) | Completed |
-| ⏳ Day 4 – Dashboard Development | Pending |
+| ✅ Day 4 – Fund Performance Analytics | Completed |
 | ⏳ Day 5 – Advanced Analytics & Business Insights | Pending |
 | ⏳ Day 6 – Final Report & Project Documentation | Pending |
 
@@ -264,7 +285,7 @@ The notebook includes:
 
 # 🎯 Current Achievement
 
-The project has successfully completed the data ingestion, data cleaning, SQLite database design, and Exploratory Data Analysis (EDA) phases.
+The project has successfully completed data ingestion, data cleaning, SQLite database creation, exploratory data analysis, and fund performance analytics. The next stage focuses on dashboard development and final business reporting.
 
 ---
 
@@ -295,6 +316,12 @@ https://github.com/SPYDER-GIT/mutual-fund-analytics
 - Data cleaning, validation, and transformation completed.
 - Business insights documented through Exploratory Data Analysis.
 - Project tracked and version-controlled using Git and GitHub.
+- Daily Return Analysis completed.
+- CAGR comparison across all mutual funds.
+- Sharpe Ratio and Sortino Ratio ranking.
+- Alpha, Beta and Maximum Drawdown analysis.
+- Benchmark comparison with NIFTY 50 and NIFTY 100.
+- Fund Scorecard generated.
 
 ---
 
@@ -305,8 +332,9 @@ https://github.com/SPYDER-GIT/mutual-fund-analytics
 | Datasets | 10 |
 | Total Records Processed | 87,000+ |
 | SQLite Tables | 10 |
-| Visualizations | 12+ |
-| Notebook | 1 |
+| Visualizations | 18+ |
+| Notebook | 2 |
+| CSV Reports | 3 |
 | Programming Language | Python |
 | Internship | Bluestock Fintech |
 
