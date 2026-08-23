@@ -1,13 +1,16 @@
 import subprocess
 import sys
+from pathlib import Path
 
 
 def run_script(script_name):
     """Run a project Python script and stop if it fails."""
     print(f"\nRunning {script_name}...")
-    
+
+    script_path = Path(__file__).parent / script_name
+
     result = subprocess.run(
-        [sys.executable, script_name],
+        [sys.executable, str(script_path)],
         check=False
     )
 
@@ -20,7 +23,7 @@ def run_script(script_name):
 
 def main():
     """Run the complete Mutual Fund Analytics pipeline."""
-    
+
     scripts = [
         "data_ingestion.py",
         "data_cleaning.py",

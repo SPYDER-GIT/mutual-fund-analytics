@@ -1,20 +1,21 @@
-# Mutual Fund Analytics
+# 📊 Mutual Fund Analytics
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi)
-![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter)
 ![Status](https://img.shields.io/badge/Status-Final%20Capstone-success?style=for-the-badge)
 
----
-
-## Project Overview
+## 📌 Project Overview
 
 **Mutual Fund Analytics** is an end-to-end data analytics capstone project developed during the **Bluestock Fintech Data Analytics Internship**.
 
 The project analyzes mutual fund market data, scheme performance, investor transactions, SIP activity, AUM, portfolio holdings, and benchmark data using **Python, Pandas, NumPy, SQL, SQLite, Jupyter Notebook, and Power BI**.
 
-The project follows a complete analytics workflow:
+The complete workflow covers data ingestion, cleaning, validation, database creation, exploratory analysis, fund performance analysis, advanced risk analytics, investor/SIP analysis, recommendation logic, and dashboard reporting.
+
+### 🔄 Analytics Workflow
 
 ```text
 Raw Data
@@ -40,141 +41,104 @@ Reports & Presentation
 
 ---
 
-## Project Objectives
+## 🎯 Project Objectives
 
-The primary objective is to build a practical mutual fund analytics solution capable of:
-
-* Ingesting and organizing multiple mutual fund datasets.
-* Cleaning and validating financial and investor data.
-* Storing processed data in a structured SQLite database.
-* Performing exploratory data analysis.
-* Analyzing fund performance and risk.
-* Comparing funds using risk-adjusted performance metrics.
-* Analyzing SIP activity and investor behavior.
-* Evaluating portfolio concentration.
-* Calculating VaR and CVaR risk metrics.
-* Analyzing rolling Sharpe ratios.
-* Identifying SIP continuity and at-risk investors.
-* Building a risk-based mutual fund recommendation system.
-* Creating an interactive Power BI dashboard.
-* Generating actionable business insights.
-* Presenting the final analysis through reports and a presentation.
+- Ingest and organize multiple mutual fund datasets
+- Clean and validate financial and investor data
+- Store processed data in a structured SQLite database
+- Perform exploratory data analysis
+- Analyze fund performance and risk
+- Compare funds using risk-adjusted metrics
+- Analyze SIP activity and investor behavior
+- Evaluate portfolio concentration
+- Calculate VaR and CVaR risk metrics
+- Analyze rolling Sharpe ratios
+- Identify SIP continuity and at-risk investors
+- Build a risk-based mutual fund recommendation system
+- Create an interactive Power BI dashboard
+- Generate actionable business insights
 
 ---
 
-# Data Sources
+## 🗂️ Repository Structure
 
-The project uses the following 10 core datasets:
-
-| Dataset                        | Description                                      |
-| ------------------------------ | ------------------------------------------------ |
-| `01_fund_master.csv`           | Mutual fund scheme master information            |
-| `02_nav_history.csv`           | Historical NAV observations                      |
-| `03_aum_by_fund_house.csv`     | Assets Under Management by fund house            |
-| `04_monthly_sip_inflows.csv`   | Monthly SIP inflows and SIP account metrics      |
-| `05_category_inflows.csv`      | Category-wise mutual fund inflows                |
-| `06_industry_folio_count.csv`  | Industry/category folio count information        |
-| `07_scheme_performance.csv`    | Fund returns, risk, and performance metrics      |
-| `08_investor_transactions.csv` | Investor transaction and demographic information |
-| `09_portfolio_holdings.csv`    | Scheme portfolio holdings and sector allocation  |
-| `10_benchmark_indices.csv`     | Benchmark index historical data                  |
-
-### Additional API Data
-
-Live NAV data was fetched using the **MF API** for five selected schemes:
-
-* SBI Bluechip
-* ICICI Bluechip
-* Nippon Large Cap
-* Axis Bluechip
-* Kotak Bluechip
-
-The downloaded API data is stored in:
-
-```text
-data/raw/
-```
-
----
-
-# Tech Stack
-
-| Category        | Technology                  |
-| --------------- | --------------------------- |
-| Programming     | Python                      |
-| Data Analysis   | Pandas, NumPy               |
-| Visualization   | Matplotlib, Seaborn, Plotly |
-| Database        | SQLite                      |
-| Database Access | SQLAlchemy                  |
-| API             | Requests                    |
-| Notebook        | Jupyter Notebook            |
-| Dashboard       | Microsoft Power BI          |
-| Version Control | Git                         |
-| Repository      | GitHub                      |
-
----
-
-# Project Structure
+The repository is organized into separate folders for data, analysis, dashboards, reports, scripts, and SQL resources.
 
 ```text
 Mutual-Fund-Analytics/
 │
+├── dashboard/
+│   └── bluestock_mf_dashboard.pbix
+│
 ├── data/
-│   ├── raw/
-│   │   ├── 01_fund_master.csv
-│   │   ├── 02_nav_history.csv
-│   │   ├── 03_aum_by_fund_house.csv
-│   │   ├── 04_monthly_sip_inflows.csv
-│   │   ├── 05_category_inflows.csv
-│   │   ├── 06_industry_folio_count.csv
-│   │   ├── 07_scheme_performance.csv
-│   │   ├── 08_investor_transactions.csv
-│   │   ├── 09_portfolio_holdings.csv
-│   │   ├── 10_benchmark_indices.csv
-│   │   ├── SBI_Bluechip.csv
-│   │   ├── ICICI_Bluechip.csv
-│   │   ├── Nippon_Large_Cap.csv
-│   │   ├── Axis_Bluechip.csv
-│   │   └── Kotak_Bluechip.csv
+│   ├── db/
+│   │   └── bluestock_mf.db
 │   │
-│   └── processed/
-│       └── cleaned datasets
+│   ├── processed/
+│   │   ├── cleaned_01_fund_master.csv
+│   │   ├── cleaned_03_aum_by_fund_house.csv
+│   │   ├── cleaned_04_monthly_sip_inflows.csv
+│   │   ├── cleaned_05_category_inflows.csv
+│   │   ├── cleaned_06_industry_folio_count.csv
+│   │   ├── cleaned_09_portfolio_holdings.csv
+│   │   ├── cleaned_10_benchmark_indices.csv
+│   │   ├── cleaned_investor_transactions.csv
+│   │   ├── cleaned_nav_history.csv
+│   │   └── cleaned_scheme_performance.csv
+│   │
+│   └── raw/
+│       ├── 01_fund_master.csv
+│       ├── 02_nav_history.csv
+│       ├── 03_aum_by_fund_house.csv
+│       ├── 04_monthly_sip_inflows.csv
+│       ├── 05_category_inflows.csv
+│       ├── 06_industry_folio_count.csv
+│       ├── 07_scheme_performance.csv
+│       ├── 08_investor_transactions.csv
+│       ├── 09_portfolio_holdings.csv
+│       ├── 10_benchmark_indices.csv
+│       ├── SBI_Bluechip.csv
+│       ├── ICICI_Bluechip.csv
+│       ├── Nippon_Large_Cap.csv
+│       ├── Axis_Bluechip.csv
+│       ├── Kotak_Bluechip.csv
+│       └── live_nav_125497.csv
 │
 ├── notebooks/
 │   ├── EDA_Analysis.ipynb
-│   └── Performance_Analytics.ipynb
+│   ├── performance_analytics.ipynb
+│   └── Advanced_Analytics.ipynb
 │
 ├── reports/
+│   ├── Dashboard.pdf
+│   ├── Mutual_Fund_Analytics_Final_Report.pdf
+│   ├── Mutual_Fund_Analytics_Final_Presentation.pptx
+│   ├── Page1_Industry_Overview.png
+│   ├── Page2_Fund_Performance.png
+│   ├── Page3_Investor_Analytics.png
+│   ├── Page4_SIP_Market_Trends.png
 │   ├── equity_fund_hhi.csv
-│   └── other analytical outputs
+│   ├── fund_scorecard.csv
+│   ├── max_drawdown.csv
+│   ├── rolling_sharpe_chart.png
+│   ├── sip_continuity_analysis.csv
+│   ├── tracking_error.csv
+│   ├── var_cvar_report.csv
+│   └── additional analytical charts and outputs
 │
-├── dashboard/
-│   └── dashboard-related files
+├── scripts/
+│   ├── data_ingestion.py
+│   ├── data_cleaning.py
+│   ├── data_quality.py
+│   ├── database_loader.py
+│   ├── live_nav_fetch.py
+│   ├── recommender.py
+│   └── run_pipeline.py
 │
-├── data_ingestion.py
-├── data_cleaning.py
-├── data_quality.py
-├── database_loader.py
-├── live_nav_fetch.py
-├── recommender.py
-├── run_pipeline.py
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
 │
-├── Advanced_Analytics.ipynb
-├── bluestock_mf.db
-├── bluestock_mf_dashboard.pbix
-│
-├── Dashboard.pdf
-├── Page1_Industry_Overview.png
-├── Page2_Fund_Performance.png
-├── Page3_Investor_Analytics.png
-├── Page4_SIP_Market_Trends.png
-│
-├── rolling_sharpe_chart.png
-├── var_cvar_report.csv
-├── sip_continuity_analysis.csv
-│
-├── schema.sql
-├── queries.sql
 ├── data_dictionary.md
 ├── requirements.txt
 └── README.md
@@ -182,15 +146,66 @@ Mutual-Fund-Analytics/
 
 ---
 
-# ETL Pipeline
+## 📚 Data Sources
 
-The project includes a master pipeline:
+The project uses **10 core datasets**:
+
+| Dataset | Description |
+|---|---|
+| `01_fund_master.csv` | Mutual fund scheme master information |
+| `02_nav_history.csv` | Historical NAV observations |
+| `03_aum_by_fund_house.csv` | Assets Under Management by fund house |
+| `04_monthly_sip_inflows.csv` | Monthly SIP inflows and SIP account metrics |
+| `05_category_inflows.csv` | Category-wise mutual fund inflows |
+| `06_industry_folio_count.csv` | Industry/category folio count information |
+| `07_scheme_performance.csv` | Fund returns, risk, and performance metrics |
+| `08_investor_transactions.csv` | Investor transaction and demographic information |
+| `09_portfolio_holdings.csv` | Scheme portfolio holdings and sector allocation |
+| `10_benchmark_indices.csv` | Benchmark index historical data |
+
+### Additional API Data
+
+Live NAV data was fetched using the **MF API** for selected schemes, including:
+
+- SBI Bluechip
+- ICICI Bluechip
+- Nippon Large Cap
+- Axis Bluechip
+- Kotak Bluechip
+
+The API-generated data is stored under:
 
 ```text
-run_pipeline.py
+data/raw/
 ```
 
-The pipeline executes the following stages:
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn, Plotly |
+| Database | SQLite |
+| Database Access | SQLAlchemy |
+| API | Requests |
+| Notebook | Jupyter Notebook |
+| Dashboard | Microsoft Power BI |
+| Version Control | Git / GitHub |
+
+---
+
+## ⚙️ ETL Pipeline
+
+The master pipeline is located at:
+
+```text
+scripts/run_pipeline.py
+```
+
+It coordinates the following stages:
 
 ```text
 data_ingestion.py
@@ -204,124 +219,71 @@ database_loader.py
 live_nav_fetch.py
 ```
 
-The complete pipeline was tested successfully and produced:
-
-```text
-PIPELINE COMPLETED SUCCESSFULLY
-```
-
 ### Pipeline Responsibilities
 
 **Data Ingestion**
-
-* Loads the raw CSV datasets.
-* Validates file availability and structure.
-* Displays dataset shape, data types, and sample records.
+- Loads raw CSV datasets
+- Validates file availability and structure
+- Inspects dataset shape, data types, and sample records
 
 **Data Cleaning**
-
-* Standardizes dates and categorical fields.
-* Handles duplicates and missing values.
-* Validates numerical values.
-* Generates cleaned datasets.
+- Standardizes dates and categorical fields
+- Handles duplicates and missing values
+- Validates numerical values
+- Generates cleaned datasets
 
 **Data Quality**
-
-* Validates relationships between datasets.
-* Checks AMFI code consistency.
-* Performs structural and data integrity checks.
+- Validates relationships between datasets
+- Checks AMFI code consistency
+- Performs structural and data integrity checks
 
 **Database Loading**
-
-* Loads cleaned datasets into SQLite.
-* Creates the analytical database tables.
+- Loads cleaned datasets into SQLite
+- Creates analytical database tables
 
 **Live NAV Fetching**
+- Retrieves NAV information for selected schemes through the MF API
 
-* Retrieves current NAV information for selected schemes through the MF API.
-
----
-
-# Setup Instructions
-
-## 1. Clone the Repository
-
-```bash
-git clone https://github.com/SPYDER-GIT/mutual-fund-analytics.git
-cd mutual-fund-analytics
-```
-
-## 2. Install Dependencies
+### Run the Pipeline
 
 ```bash
 pip install -r requirements.txt
-```
-
-## 3. Run the Complete Pipeline
-
-```bash
-py run_pipeline.py
-```
-
-The master pipeline performs:
-
-```text
-Data Ingestion
-      ↓
-Data Cleaning
-      ↓
-Data Quality Validation
-      ↓
-SQLite Database Loading
-      ↓
-Live NAV Fetching
+python scripts/run_pipeline.py
 ```
 
 ---
 
-# Data Cleaning
+## 🧹 Data Cleaning & Validation
 
-The data cleaning process was applied across all datasets.
+The cleaning workflow includes:
 
-## NAV History
+### NAV History
+- Date conversion
+- Sorting by AMFI code and date
+- Duplicate removal
+- Missing NAV handling
+- Positive NAV validation
 
-Processing includes:
+### Investor Transactions
+- Transaction date standardization
+- Transaction type standardization
+- Transaction validation
+- Transaction amount validation
+- KYC status standardization
+- Duplicate removal
 
-* Date conversion.
-* Sorting by AMFI code and date.
-* Duplicate removal.
-* Missing NAV handling.
-* Positive NAV validation.
+### Scheme Performance
+- Numeric type conversion
+- Missing-value validation
+- Expense-ratio validation
+- Duplicate removal
 
-## Investor Transactions
-
-Processing includes:
-
-* Transaction date standardization.
-* Transaction type standardization.
-* Transaction type validation.
-* Transaction amount validation.
-* KYC status standardization.
-* Duplicate removal.
-
-## Scheme Performance
-
-Processing includes:
-
-* Numeric type conversion.
-* Missing-value validation.
-* Expense-ratio validation.
-* Duplicate removal.
-
-## Other Datasets
-
-The remaining datasets were processed using:
-
-* Duplicate removal.
-* Date/month conversion.
-* Data type standardization.
-* Missing-value validation.
-* Processed output generation.
+### Other Datasets
+- Duplicate removal
+- Date/month conversion
+- Data type standardization
+- Missing-value validation
+- Processed output generation
 
 Cleaned datasets are stored in:
 
@@ -331,161 +293,129 @@ data/processed/
 
 ---
 
-# Data Quality Validation
+## 🗄️ SQLite Database
 
-The project validates the relationship between fund master records and NAV history.
-
-Final validation results:
-
-```text
-Fund master records: 40
-NAV history records: 46,000
-Unique AMFI codes: 40
-```
-
-The final quality check confirmed:
-
-```text
-Data quality check passed:
-all AMFI codes are present in NAV history.
-```
-
----
-
-# SQLite Database
-
-The project uses **SQLite** to store and query the cleaned datasets.
+The project uses SQLite to store and query the cleaned datasets.
 
 Database:
 
 ```text
-bluestock_mf.db
+data/db/bluestock_mf.db
 ```
 
-The database contains **10 analytical tables**.
+The database contains **10 analytical tables** and was loaded using **SQLAlchemy**.
 
-The database loader uses **SQLAlchemy** to load processed datasets into SQLite.
-
-Final database load:
+Database resources:
 
 ```text
-10 tables
-87,533 rows
-```
-
-Database-related files:
-
-```text
-schema.sql
-queries.sql
+data/db/bluestock_mf.db
+sql/schema.sql
+sql/queries.sql
 data_dictionary.md
-bluestock_mf.db
 ```
 
 ---
 
-# Exploratory Data Analysis
+## 🔎 Exploratory Data Analysis
 
-The EDA phase analyzes multiple dimensions of the mutual fund ecosystem.
+The EDA phase analyzes:
 
-### Analysis Areas
+- NAV trends
+- AUM growth
+- SIP inflow trends
+- Category-wise inflows
+- Investor demographics
+- Geographic distribution
+- Folio growth
+- Sector allocation
+- Daily NAV returns
+- Fund performance
+- Benchmark relationships
 
-* NAV trends.
-* AUM growth.
-* SIP inflow trends.
-* Category-wise inflows.
-* Investor demographics.
-* Geographic distribution.
-* Folio growth.
-* Sector allocation.
-* Daily NAV returns.
-* Fund performance.
-* Benchmark relationships.
-
-EDA notebooks:
+### Notebooks
 
 ```text
 notebooks/EDA_Analysis.ipynb
-notebooks/Performance_Analytics.ipynb
+notebooks/performance_analytics.ipynb
 ```
 
 ---
 
-# Fund Performance Analytics
+## 📈 Fund Performance Analytics
 
-Mutual fund performance is evaluated using both absolute-return and risk-adjusted metrics.
+Funds are evaluated using both absolute-return and risk-adjusted metrics.
 
-### Metrics Analyzed
+### Metrics
 
-* Daily NAV returns.
-* 1-year returns.
-* 3-year returns.
-* 5-year returns.
-* CAGR.
-* Sharpe Ratio.
-* Sortino Ratio.
-* Alpha.
-* Beta.
-* Standard deviation.
-* Maximum Drawdown.
-* Benchmark comparison.
-* Tracking Error.
-* Fund Scorecard.
+- Daily NAV returns
+- 1-year returns
+- 3-year returns
+- 5-year returns
+- CAGR
+- Sharpe Ratio
+- Sortino Ratio
+- Alpha
+- Beta
+- Standard Deviation
+- Maximum Drawdown
+- Benchmark comparison
+- Tracking Error
+- Fund Scorecard
 
-These metrics allow funds to be compared based on both **return and risk-adjusted performance**.
+These metrics support comparison of funds based on both **return and risk-adjusted performance**.
 
 ---
 
-# Advanced Analytics
+## 📊 Advanced Analytics
 
 Advanced analysis is implemented in:
 
 ```text
-Advanced_Analytics.ipynb
+notebooks/Advanced_Analytics.ipynb
 ```
 
-## 1. Value at Risk — VaR
+### 1. Value at Risk — VaR
 
-Value at Risk estimates the potential portfolio loss at a selected confidence level.
+VaR estimates potential portfolio loss at a selected confidence level.
 
 Output:
 
 ```text
-var_cvar_report.csv
+reports/var_cvar_report.csv
 ```
 
-## 2. Conditional Value at Risk — CVaR
+### 2. Conditional Value at Risk — CVaR
 
-CVaR estimates the expected loss beyond the VaR threshold and provides an additional measure of downside risk.
+CVaR estimates the expected loss beyond the VaR threshold and provides an additional downside-risk measure.
 
-## 3. Rolling Sharpe Ratio
+### 3. Rolling Sharpe Ratio
 
-Rolling Sharpe analysis evaluates how risk-adjusted performance changes over time.
+Rolling Sharpe analysis evaluates changes in risk-adjusted performance over time.
 
 Output:
 
 ```text
-rolling_sharpe_chart.png
+reports/rolling_sharpe_chart.png
 ```
 
-## 4. SIP Continuity Analysis
+### 4. SIP Continuity Analysis
 
 SIP behavior was analyzed using:
 
-* SIP transaction count.
-* Average gap between SIP transactions.
-* Investor continuity.
-* At-risk investor identification.
+- SIP transaction count
+- Average gap between SIP transactions
+- Investor continuity
+- At-risk investor identification
 
 Output:
 
 ```text
-sip_continuity_analysis.csv
+reports/sip_continuity_analysis.csv
 ```
 
-## 5. Portfolio Concentration
+### 5. Portfolio Concentration
 
-The **Herfindahl-Hirschman Index (HHI)** was calculated to evaluate equity fund portfolio concentration.
+The **Herfindahl-Hirschman Index (HHI)** was calculated to evaluate equity-fund portfolio concentration.
 
 Output:
 
@@ -495,7 +425,7 @@ reports/equity_fund_hhi.csv
 
 ---
 
-# Investor Analytics
+## 👥 Investor & SIP Analytics
 
 The investor transaction dataset contains:
 
@@ -524,18 +454,18 @@ These results highlight a potential opportunity for investor-retention and SIP-e
 
 ---
 
-# Mutual Fund Recommendation System
+## 🤖 Mutual Fund Recommendation System
 
-The project includes a risk-based recommendation system implemented in:
+A risk-based recommendation system is implemented in:
 
 ```text
-recommender.py
+scripts/recommender.py
 ```
 
-Run the recommendation system using:
+Run it with:
 
 ```bash
-py recommender.py
+python scripts/recommender.py
 ```
 
 The system accepts three risk categories:
@@ -546,7 +476,7 @@ Moderate
 High
 ```
 
-It then recommends the **top three funds based on Sharpe Ratio** within the selected risk category.
+It recommends the **top three funds based on Sharpe Ratio** within the selected risk category.
 
 Example:
 
@@ -560,247 +490,183 @@ Kotak Liquid Fund
 ABSL Liquid Fund
 ```
 
-The recommendation system was tested successfully for:
+The recommendation system was tested for all three risk categories.
 
-* Low risk.
-* Moderate risk.
-* High risk.
+> **Note:** The recommender is an analytical/educational model and is not intended to provide personalized financial advice.
 
 ---
 
-# Power BI Dashboard
+## 📊 Power BI Dashboard
 
-The project includes an interactive Power BI dashboard:
+The interactive Power BI dashboard is available at:
 
 ```text
-bluestock_mf_dashboard.pbix
+dashboard/bluestock_mf_dashboard.pbix
 ```
 
-The dashboard contains four major pages.
+### Dashboard Pages
 
-## Page 1 — Industry Overview
+#### Page 1 — Industry Overview
 
 Focuses on:
 
-* Industry-level overview.
-* Fund and folio information.
-* Category distribution.
-* Market-level KPIs.
+- Industry-level overview
+- Fund and folio information
+- Category distribution
+- Market-level KPIs
 
-Screenshot:
+![Industry Overview](reports/Page1_Industry_Overview.png)
 
-```text
-Page1_Industry_Overview.png
-```
-
-## Page 2 — Fund Performance
+#### Page 2 — Fund Performance
 
 Focuses on:
 
-* Fund returns.
-* Performance comparison.
-* Risk metrics.
-* Fund-level analysis.
+- Fund returns
+- Performance comparison
+- Risk metrics
+- Fund-level analysis
 
-Screenshot:
+![Fund Performance](reports/Page2_Fund_Performance.png)
 
-```text
-Page2_Fund_Performance.png
-```
-
-## Page 3 — Investor Analytics
+#### Page 3 — Investor Analytics
 
 Focuses on:
 
-* Investor demographics.
-* SIP behavior.
-* Investor segmentation.
-* Transaction analysis.
+- Investor demographics
+- SIP behavior
+- Investor segmentation
+- Transaction analysis
 
-Screenshot:
+![Investor Analytics](reports/Page3_Investor_Analytics.png)
 
-```text
-Page3_Investor_Analytics.png
-```
-
-## Page 4 — SIP & Market Trends
+#### Page 4 — SIP & Market Trends
 
 Focuses on:
 
-* SIP inflows.
-* SIP account trends.
-* Market/category trends.
-* Long-term market movement.
+- SIP inflows
+- SIP account trends
+- Market/category trends
+- Long-term market movement
 
-Screenshot:
+![SIP & Market Trends](reports/Page4_SIP_Market_Trends.png)
 
-```text
-Page4_SIP_Market_Trends.png
-```
-
-A PDF export of the dashboard is also included:
+A PDF export of the dashboard is also available:
 
 ```text
-Dashboard.pdf
+reports/Dashboard.pdf
 ```
 
 ---
 
-# Key Business Insights
+## 💡 Key Business Insights
 
 The analysis generated insights across fund performance, investor behavior, SIP activity, portfolio concentration, and market trends.
 
 ### Major Findings
 
-* Risk-adjusted fund performance varies significantly across schemes.
-* Low-risk funds can achieve strong Sharpe Ratios, particularly within liquid-fund categories.
-* SIP investors demonstrate different levels of continuity and transaction gaps.
-* A significant proportion of eligible long-term SIP investors were classified as at-risk under the defined continuity methodology.
-* Portfolio concentration varies substantially across equity funds.
-* SIP inflows and active SIP accounts highlight the importance of systematic investing behavior.
-* Fund selection should consider risk-adjusted metrics rather than returns alone.
+- Risk-adjusted fund performance varies significantly across schemes.
+- Low-risk funds can achieve strong Sharpe Ratios, particularly within liquid-fund categories.
+- SIP investors demonstrate different levels of continuity and transaction gaps.
+- A significant proportion of eligible long-term SIP investors were classified as at-risk under the defined continuity methodology.
+- Portfolio concentration varies substantially across equity funds.
+- SIP inflows and active SIP accounts highlight the importance of systematic investing behavior.
+- Fund selection should consider risk-adjusted metrics rather than returns alone.
 
 ---
 
-# Final Deliverables
+## 📦 Final Deliverables
 
-| Deliverable                | Status           |
-| -------------------------- | ---------------- |
-| Final Report PDF           | Completed        |
-| 12-Slide Presentation      | Completed        |
-| Clean GitHub Repository    | Completed        |
-| README.md                  | Completed        |
-| ETL Pipeline               | Completed        |
-| SQLite Database            | Completed        |
-| EDA Analysis               | Completed        |
-| Performance Analytics      | Completed        |
-| Advanced Analytics         | Completed        |
-| Risk-Based Recommender     | Completed        |
-| Power BI Dashboard         | Completed        |
-| Dashboard PDF Export       | Completed        |
-| Dashboard Page Screenshots | Completed        |
-| GitHub Version Tag         | Final Submission |
+| Deliverable | Location | Status |
+|---|---|---|
+| Final Report | `reports/Mutual_Fund_Analytics_Final_Report.pdf` | ✅ Completed |
+| Final Presentation | `reports/Mutual_Fund_Analytics_Final_Presentation.pptx` | ✅ Completed |
+| Power BI Dashboard | `dashboard/bluestock_mf_dashboard.pbix` | ✅ Completed |
+| Dashboard PDF | `reports/Dashboard.pdf` | ✅ Completed |
+| ETL Pipeline | `scripts/` | ✅ Completed |
+| SQLite Database | `data/db/bluestock_mf.db` | ✅ Completed |
+| EDA | `notebooks/EDA_Analysis.ipynb` | ✅ Completed |
+| Performance Analytics | `notebooks/performance_analytics.ipynb` | ✅ Completed |
+| Advanced Analytics | `notebooks/Advanced_Analytics.ipynb` | ✅ Completed |
+| Recommendation System | `scripts/recommender.py` | ✅ Completed |
+| SQL Resources | `sql/` | ✅ Completed |
+| Data Dictionary | `data_dictionary.md` | ✅ Completed |
 
 ---
 
-# Project Validation
+## ✅ Project Validation
 
 The master pipeline was tested using:
 
 ```bash
-py run_pipeline.py
+python scripts/run_pipeline.py
 ```
 
-All pipeline stages completed successfully:
+The pipeline completed all major stages successfully:
 
 ```text
-data_ingestion.py completed successfully.
-data_cleaning.py completed successfully.
-data_quality.py completed successfully.
-database_loader.py completed successfully.
-live_nav_fetch.py completed successfully.
+✓ Data Ingestion
+✓ Data Cleaning
+✓ Data Quality Validation
+✓ SQLite Database Loading
+✓ Live NAV Fetching
 
 PIPELINE COMPLETED SUCCESSFULLY
 ```
 
-The recommendation system was also tested successfully for:
+The recommendation system was also tested for:
 
 ```text
-Low
-Moderate
-High
+✓ Low
+✓ Moderate
+✓ High
 ```
 
 risk categories.
 
 ---
 
-# Limitations
+## ⚠️ Limitations
 
-The project has several limitations:
-
-* The analysis is based on the datasets provided for the internship project.
-* Historical performance does not guarantee future returns.
-* The recommendation system primarily uses risk grade and Sharpe Ratio.
-* Investor continuity classifications depend on the selected SIP-gap methodology.
-* Portfolio concentration analysis depends on the available holdings data.
-* Live NAV analysis depends on API availability.
-* Power BI dashboard results depend on the underlying dataset and refresh status.
-* The project is intended for analytical and educational purposes and should not be considered financial advice.
+- The analysis is based on the datasets provided for the internship project.
+- Historical performance does not guarantee future returns.
+- The recommendation system primarily uses risk grade and Sharpe Ratio.
+- Investor continuity classifications depend on the selected SIP-gap methodology.
+- Portfolio concentration analysis depends on the available holdings data.
+- Live NAV analysis depends on API availability.
+- Power BI dashboard results depend on the underlying dataset and refresh status.
+- The project is intended for analytical and educational purposes and should not be considered financial advice.
 
 ---
 
-# Recommendations
+## 🚀 Future Improvements
 
-## For Fund Managers
+Potential extensions include:
 
-* Monitor investor SIP continuity.
-* Identify potentially at-risk SIP investors early.
-* Analyze portfolio concentration regularly.
-* Monitor risk-adjusted performance alongside absolute returns.
-
-## For Investors
-
-* Consider risk appetite before selecting funds.
-* Evaluate Sharpe and Sortino Ratios alongside returns.
-* Review maximum drawdown and volatility.
-* Maintain SIP discipline for long-term investing.
-
-## For Analytics Teams
-
-* Automate regular NAV and benchmark data updates.
-* Monitor rolling risk metrics.
-* Integrate dashboard refresh automation.
-* Extend the recommendation system using additional investor and fund characteristics.
+- Automating regular NAV and benchmark data updates
+- Adding scheduled data refresh workflows
+- Monitoring rolling risk metrics
+- Integrating automated Power BI refresh
+- Extending the recommendation model with additional fund characteristics
+- Adding machine-learning-based fund classification
+- Building a web-based analytics interface
+- Adding automated data-quality monitoring
+- Expanding investor segmentation and retention analytics
 
 ---
 
-# Final Project Status
-
-The Mutual Fund Analytics capstone has completed the major development stages:
-
-```text
-✓ Project Setup
-✓ Data Ingestion
-✓ Data Cleaning
-✓ Data Quality Validation
-✓ SQLite Database
-✓ Exploratory Data Analysis
-✓ Fund Performance Analytics
-✓ Advanced Analytics
-✓ Risk Analysis
-✓ Investor Analytics
-✓ SIP Continuity Analysis
-✓ Portfolio Concentration Analysis
-✓ Mutual Fund Recommendation System
-✓ Power BI Dashboard
-✓ Final Documentation
-✓ Final Presentation
-✓ Master ETL Pipeline
-✓ GitHub Repository
-```
-
-## Project Status: Final Capstone Completed
-
----
-
-# GitHub Repository
-
-**Repository:**
-https://github.com/SPYDER-GIT/mutual-fund-analytics
-
----
-
-# Author
+## 👨‍💻 Author
 
 **Suraj Singh**
 
 **Bluestock Fintech — Data Analytics Internship**
 
+🔗 **GitHub Repository:**  
+https://github.com/SPYDER-GIT/mutual-fund-analytics
+
 ---
 
-# Disclaimer
+## ⚠️ Disclaimer
 
-This project was developed for educational and internship purposes as part of the **Bluestock Fintech Data Analytics Internship**.
+This project was developed for **educational and internship purposes** as part of the **Bluestock Fintech Data Analytics Internship**.
 
-The analysis and recommendation outputs demonstrate data analytics techniques and should not be considered personalized investment or financial advice.
+The analysis, recommendations, and dashboard outputs demonstrate data analytics techniques and should **not be considered personalized investment or financial advice**.

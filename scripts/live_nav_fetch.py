@@ -6,8 +6,9 @@ import pandas as pd
 import requests
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW_FOLDER = PROJECT_ROOT / "data" / "raw"
+
 
 SCHEMES = {
     "SBI_Bluechip": 119551,

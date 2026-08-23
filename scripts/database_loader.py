@@ -6,9 +6,10 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 PROCESSED_FOLDER = PROJECT_ROOT / "data" / "processed"
-DATABASE_PATH = PROJECT_ROOT / "bluestock_mf.db"
+DATABASE_PATH = PROJECT_ROOT / "data" / "db" / "bluestock_mf.db"
+
 
 
 CSV_FILES = [
