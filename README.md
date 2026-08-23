@@ -41,6 +41,20 @@ Reports & Presentation
 
 ---
 
+## 🏆 Evaluation Deliverables
+
+| ID | Deliverable | Project Implementation | Status |
+|---|---|---|---|
+| D1 | ETL Pipeline | `scripts/run_pipeline.py` + supporting scripts | ✅ |
+| D2 | SQLite Database | `sql/schema.sql` + SQLite database provided in submission | ✅ Completed |
+| D3 | EDA | `notebooks/EDA_Analysis.ipynb` | ✅ |
+| D4 | Performance Metrics | `notebooks/performance_analytics.ipynb` + CSV reports | ✅ |
+| D5 | Interactive Dashboard | `dashboard/bluestock_mf_dashboard.pbix` | ✅ |
+| D6 | Advanced Analytics | `notebooks/Advanced_Analytics.ipynb` + recommender | ✅ |
+| D7 | Final Report & Slides | `reports/` | ✅ |
+
+---
+
 ## 🎯 Project Objectives
 
 - Ingest and organize multiple mutual fund datasets
